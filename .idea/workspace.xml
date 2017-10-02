@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61cd80f1-e2a6-4a2c-be99-6ec1c91da1a3" name="Default" comment="MainCommit">
+    <list default="true" id="61cd80f1-e2a6-4a2c-be99-6ec1c91da1a3" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyHttpServer/MyHttpServer" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/bg.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/footer-logo.png" />
@@ -675,7 +675,7 @@
       <updated>1506484587191</updated>
       <workItem from="1506484592407" duration="12058000" />
       <workItem from="1506653395338" duration="1321000" />
-      <workItem from="1506912534705" duration="12926000" />
+      <workItem from="1506912534705" duration="12945000" />
     </task>
     <task id="LOCAL-00001" summary="02.10 tryParsIndex">
       <created>1506930655300</created>
@@ -688,7 +688,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26305000" />
+    <option name="totallyTimeSpent" value="26324000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
