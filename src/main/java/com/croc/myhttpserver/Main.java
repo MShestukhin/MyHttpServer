@@ -1,10 +1,9 @@
+package com.croc.myhttpserver;
+
 import com.sun.net.httpserver.HttpContext;
-import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
-import sun.net.www.protocol.https.HttpsURLConnectionImpl;
 
 import java.net.InetSocketAddress;
-import java.net.URLConnection;
 
 /**
  * Created by MShestukhin on 27.09.2017.
