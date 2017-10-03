@@ -15,9 +15,13 @@ public class IndexHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+       System.out.print(String.valueOf(exchange.getRequestURI().getPath().toString().indexOf("/")));
+        File file= new File(getClass().getClassLoader().getResource("images/social.png").getFile());
+        System.out.print(String.valueOf(file.exists()));
+        //System.out.print(file.exists());
         OutputStream os = exchange.getResponseBody();
         //StringBuilder str = null;
-        FileReader file= new FileReader(getClass().getClassLoader().getResource("index.html").getFile());
+       /* FileReader fileReader= new FileReader(getClass().getClassLoader().getResource("index.html").getFile());
         char[] buff=new char[1024];
         int i=0;
         while ((i=file.read(buff))!=-1){
@@ -27,6 +31,6 @@ public class IndexHandler implements HttpHandler {
             os.write(str.getBytes());
             System.out.print(str);
         }
-        os.close();
+        os.close();*/
     }
 }

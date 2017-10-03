@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) throws Exception{
         HttpServer server= HttpServer.create();
         server.bind(new InetSocketAddress(3333),0);
-        HttpContext context=server.createContext("/images", new GetHandler());
+        //HttpContext context=server.createContext("/images", new GetHandler());
         HttpContext contxt1=server.createContext("/", new IndexHandler());
         server.start();
     }
