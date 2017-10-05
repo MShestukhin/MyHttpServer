@@ -16,21 +16,16 @@ public class IndexHandler implements HttpHandler {
 
     private void readChatFile(String path, HttpExchange exchange) throws IOException {
         File file=new File(getClass().getClassLoader().getResource(path).getFile());
-        FileReader fileReader = new FileReader(file);
-        char[] buff = new char[(int) file.length()];
+        FileInputStream fileReader = new FileInputStream(file);
+        byte[] buff = new byte[(int) file.length()];
         OutputStream os=null;
         int i = 0;
         try {
             while ((i = fileReader.read(buff)) != -1) {
-                String str = new String(buff);
-                try {
-                    exchange.sendResponseHeaders(200, str.length());
-                    os = exchange.getResponseBody();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                os.write(str.getBytes());
             }
+            exchange.sendResponseHeaders(200, buff.length);
+            os = exchange.getResponseBody();
+            os.write(buff);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -49,21 +44,7 @@ public class IndexHandler implements HttpHandler {
         if (strPath.isEmpty()) {
             readChatFile("index.html", exchange);
         }
-        if(strPath.contains(".png")&&strPath.contains(".ico")){
-            System.out.print(strPath);
-            File filE= new File(getClass().getClassLoader().getResource("images/bg.png").getFile());
-            FileInputStream file = new FileInputStream(filE);
-            int c = file.available();
-            byte[] bytes = new byte[c];
-            int i = 0;
-            while ((i=file.read(bytes))!=-1){};
-            exchange.sendResponseHeaders(1024,bytes.length);
-            OutputStream os = exchange.getResponseBody();
-            os.write(bytes);
-            os.close();
-        }
         else {
-            System.out.print(strPath);
             this.readChatFile(strPath,exchange);
         }
     }
