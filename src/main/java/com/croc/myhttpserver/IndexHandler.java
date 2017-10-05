@@ -23,7 +23,7 @@ public class IndexHandler implements HttpHandler {
         try {
             while ((i = fileReader.read(buff)) != -1) {
             }
-            exchange.sendResponseHeaders(200, buff.length);
+            exchange.sendResponseHeaders(0, buff.length);
             os = exchange.getResponseBody();
             os.write(buff);
         } catch (IOException e) {
