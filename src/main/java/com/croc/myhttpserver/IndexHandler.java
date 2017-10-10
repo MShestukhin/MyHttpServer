@@ -87,6 +87,7 @@ public class IndexHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
+        System.out.print("handler");
         String strPath = exchange.getRequestURI().toString().substring(1);
         if (strPath.isEmpty()) {
             readChatFile("index.html", exchange);
