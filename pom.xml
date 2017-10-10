@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.croc.myhttpserver</groupId>
-    <artifactId>My httpserver</artifactId>
+    <artifactId>httpserver</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
