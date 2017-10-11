@@ -19,8 +19,9 @@ import java.nio.file.Files;
  * Created by MShestukhin on 02.10.2017.
  */
 public class IndexHandler implements HttpHandler {
-
+    
     private void readChatFile(String path, HttpExchange exchange) throws IOException {
+        System.out.print(path+"\n");
         File file=new File(getClass().getClassLoader().getResource(path).getFile());
         FileInputStream fileReader = new FileInputStream(file);
         Headers header=exchange.getResponseHeaders();
