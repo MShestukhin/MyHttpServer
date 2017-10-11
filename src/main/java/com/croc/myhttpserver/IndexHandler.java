@@ -58,6 +58,7 @@ public class IndexHandler implements HttpHandler {
         }
     }
     private void readChatFile(String path, HttpExchange exchange) throws IOException {
+        System.out.print(path+"\n");
         File file=new File(getClass().getClassLoader().getResource(path).getFile());
         FileInputStream fileReader = new FileInputStream(file);
         Headers header=exchange.getResponseHeaders();
@@ -87,7 +88,6 @@ public class IndexHandler implements HttpHandler {
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        System.out.print("handler");
         String strPath = exchange.getRequestURI().toString().substring(1);
         if (strPath.isEmpty()) {
             readChatFile("index.html", exchange);
